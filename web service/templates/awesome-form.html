@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Fast Feature Selector</title>
+        <link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Fast Feature Selector</h1>
+        <form method="POST" enctype="multipart/form-data">
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br>
+            <label for="features">Number of features to select:</label><br>
+            <input type="number" id="features" name="features"><br>
+            <input type="file" name="file"><br>
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>
