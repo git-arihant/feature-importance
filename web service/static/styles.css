@@ -1,0 +1,111 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Inter, "sans-serif";
+    background-color: #303338;
+    height: 100%;
+}
+
+.head {
+    text-align: center;
+    margin-top: 50px;
+    padding: 10px;
+    font-weight: 800;
+    font-size: 50px;
+    color: white;
+}
+
+form {
+    position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 400px;
+	padding: 40px;
+	background: rgba(0,0,0,.4);
+	box-sizing: border-box;
+	box-shadow: 0 15px 25px rgba(0,0,0,.5);
+	border-radius: 10px;
+    color: white;
+}
+
+form .inputBox {
+    position: relative;
+}
+
+form .inputBox input {
+	width: 100%;
+	padding: 10px 0;
+	font-size: 16px;
+	color: #FFF;
+	letter-spacing: 1px;
+	margin-bottom: 30px;
+	border: none;
+	border-bottom: 1px solid #FFF;
+	outline: none;
+	background: transparent;
+}
+form .inputBox label {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 10px 0;
+	font-size: 16px;
+	color: #FFF;
+	pointer-events: none;
+	transition: .5s;
+	animation: LabelOnLoad 1s forwards 0s ease;
+}
+
+form .inputBox input:focus ~ label, 
+form .inputBox input:valid ~ label {
+	top: -19px;
+	left:0;
+	color: #03A9F4;
+	font-size: 12px;
+}
+
+.submit {
+    background: none;
+    color: #ffa260;
+    border: 2px solid;
+    padding: 0.5em 2em;
+    font-size: 1em;
+    transition: all 0.25s;
+    margin-left: 100px;
+}
+
+.submit:hover{
+    border-color: #f1ff5c;
+    color: white;
+    box-shadow: 0 0.5em 0.5em -0.4em #f1ff5c;
+    transform: translateY(-0.25em);
+    cursor: pointer;
+}
+
+.file-input {
+    width: 100%;
+	padding: 10px 0;
+	font-size: 16px;
+	color: #FFF;
+	letter-spacing: 1px;
+	margin-bottom: 30px;
+	border: none;
+	outline: none;
+	background: transparent;
+}
+
+@keyframes LabelOnLoad{
+    0%{
+        transform: rotate(0) translateY(-19px);
+        opacity: 0;
+        }
+    100%{
+        transform: rotate(0) translateY(0);
+        opacity: 1;
+        }
+}

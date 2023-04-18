@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Fast Feature Selector</title>
+    <link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1 class="head">Fast Feature Selector</h1>
+    <form method="POST" enctype="multipart/form-data" class="form">
+        <div class="inputBox">
+            <input type="email" id="email" name="email"><br>
+            <label for="email">Email</label><br>
+        </div>
+        <div class="inputBox">
+            <input type="number" id="features" name="features"><br>
+            <label for="features">Number of features to select</label><br>
+        </div>
+        <input type="file" name="file" class="file-input"><br>
+        <input type="submit" value="Submit" class="submit">
+    </form>
+</body>
+</html>
